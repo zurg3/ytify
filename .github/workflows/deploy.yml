@@ -23,7 +23,6 @@ jobs:
         run: |
           git clone https://github.com/n-ce/ytify.git
           cd ytify
-          git checkout v7.final
           npm install
           npm run build
 
