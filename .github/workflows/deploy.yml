@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: n-ce/ytify
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
