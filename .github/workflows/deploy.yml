@@ -12,6 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          repository: n-ce/ytify
+        
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
@@ -21,15 +26,13 @@ jobs:
         env:
           VITE_BASE_PATH: "/ytify/"
         run: |
-          git clone https://github.com/n-ce/ytify.git
-          cd ytify
           npm install
           npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ytify/dist
+          path: dist
 
   deploy:
     needs: build
