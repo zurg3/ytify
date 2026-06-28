@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: n-ce/ytify
-          ref: ee492288a1a3317841e95afd6d74653c66491a84
+          ref: 73acec36a3f4347f9d28ee289d02f7518610a367
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
